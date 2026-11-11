@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma a Pan · Panadería artesanal y desayunos en Mérida</title>
+<meta name="description" content="Panadería artesanal y desayunos en Mérida, Yucatán. Sucursales en Col. México Norte y Centro. Consulta el menú, pide por Rappi o Uber Eats y suma sellos en tu tarjeta de lealtad.">
+<meta property="og:title" content="Aroma a Pan · Buen pan, buen día">
+<meta property="og:description" content="Panadería artesanal + desayunos con alma. Hecho fresco todos los días en Mérida.">
+<meta property="og:image" content="assets/instagram/post-5.jpg">
+<link rel="icon" href="assets/instagram/profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "Aroma a Pan",
+  "telephone": "+52 999 394 5419",
+  "servesCuisine": ["Panadería", "Desayunos", "Café"],
+  "address": {"@type": "PostalAddress","streetAddress": "C. 1H 138, Residencial Col. México","addressLocality": "Mérida","addressRegion": "Yucatán","postalCode": "97128","addressCountry": "MX"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "08:00","closes": "20:00"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "08:00","closes": "12:30"}
+  ],
+  "sameAs": ["https://www.instagram.com/aromaa.pan/"]
+}
+</script>
+<style>
+:root{
+  --papel:#F6EBDD;
+  --miga:#FFF8EE;
+  --corteza:#5B3A24;
+  --corteza-suave:#7d5a42;
+  --cobalto:#1E4FD8;
+  --tomate:#E9542F;
+  --sello:#C9A57A;
+  --linea:#e3cfb6;
+  --wrap:1180px;
+  --r-s:10px; --r-m:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Bricolage Grotesque",system-ui,sans-serif;
+  font-variation-settings:"opsz" 16;
+  background:var(--papel);color:var(--corteza);
+  font-size:1.0625rem;line-height:1.6;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalto);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:96px 0}
+h2{
+  font-weight:800;font-stretch:80%;font-variation-settings:"opsz" 96;
+  font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:.95;letter-spacing:-.02em;
+  color:var(--cobalto);margin-bottom:18px;max-width:16ch;
+}
+.lead{font-size:1.2rem;max-width:56ch;color:var(--corteza-suave)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font:inherit;font-weight:700;font-size:1rem;text-decoration:none;
+  padding:14px 22px;border-radius:999px;border:2px solid var(--corteza);
+  background:transparent;color:var(--corteza);cursor:pointer;
+  transition:background .2s,color .2s,transform .2s;
+}
+.btn:hover{background:var(--corteza);color:var(--miga)}
+.btn--tomate{background:var(--tomate);border-color:var(--tomate);color:#fff}
+.btn--tomate:hover{background:#c9431f;border-color:#c9431f;color:#fff}
+.btn--cobalto{background:var(--cobalto);border-color:var(--cobalto);color:#fff}
+.btn--cobalto:hover{background:#163da9;border-color:#163da9;color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,235,221,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.nav.is-scrolled{border-color:var(--linea)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
+.brand img{width:44px;height:44px;border-radius:50%}
+.nav ul{display:flex;gap:28px;list-style:none}
+.nav ul a{text-decoration:none;font-weight:600}
+.nav ul a:hover{color:var(--cobalto)}
+.nav .btn{padding:10px 18px}
+.menu-toggle{display:none;background:none;border:0;font:inherit;font-weight:700;color:var(--corteza);cursor:pointer;padding:8px}
+
+/* ---------- Hero ---------- */
+.hero{padding:56px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.lema{
+  font-weight:800;font-stretch:75%;font-variation-settings:"opsz" 96;
+  font-size:clamp(4.2rem,13vw,10.5rem);line-height:.8;letter-spacing:-.035em;
+  margin-bottom:32px;
+}
+.lema span{display:block}
+.lema .l1{color:var(--cobalto)}
+.lema .l2{color:var(--tomate)}
+.hero p.lead{margin-bottom:28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:20px;font-weight:600;font-size:.98rem}
+.hero-meta strong{color:var(--cobalto)}
+.collage{position:relative;height:560px}
+.collage figure{position:absolute;border-radius:var(--r-m);overflow:hidden;box-shadow:0 18px 40px -18px rgba(91,58,36,.45);border:6px solid var(--miga)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage .c1{width:58%;height:66%;left:0;top:6%;transform:rotate(-3deg)}
+.collage .c2{width:52%;height:48%;right:0;top:0;transform:rotate(4deg)}
+.collage .c3{width:50%;height:46%;right:6%;bottom:0;transform:rotate(-2deg)}
+.collage .sticker{position:absolute;left:28%;bottom:4%;width:140px;height:140px;border-radius:50%;border:none;box-shadow:0 10px 30px -10px rgba(91,58,36,.5);transform:rotate(-10deg)}
+
+/* entrada orquestada del lema */
+@media (prefers-reduced-motion:no-preference){
+  .lema span{opacity:0;transform:translateY(40%)}
+  .is-loaded .lema span{animation:sube .9s cubic-bezier(.2,.8,.2,1) forwards}
+  .is-loaded .lema .l2{animation-delay:.15s}
+  .collage figure{opacity:0}
+  .is-loaded .collage figure{animation:aparece .8s ease forwards}
+  .is-loaded .collage .c2{animation-delay:.35s}
+  .is-loaded .collage .c3{animation-delay:.5s}
+  .is-loaded .collage .sticker{animation-delay:.75s}
+}
+@keyframes sube{to{opacity:1;transform:none}}
+@keyframes aparece{to{opacity:1}}
+
+/* ---------- Instagram ---------- */
+.ig{background:var(--miga);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.ig .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.ig-card{background:#fff;border-radius:22px;padding:28px;box-shadow:0 24px 60px -30px rgba(91,58,36,.5);border:1px solid var(--linea);max-width:470px}
+.ig-top{display:flex;align-items:center;gap:22px}
+.ig-avatar{position:relative;width:96px;height:96px;flex:none}
+.ig-avatar::before{content:"";position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,var(--tomate),#f7b267,var(--cobalto),var(--tomate))}
+@media (prefers-reduced-motion:no-preference){.ig-avatar::before{animation:gira 8s linear infinite}}
+@keyframes gira{to{transform:rotate(360deg)}}
+.ig-avatar img{position:relative;width:100%;height:100%;border-radius:50%;border:4px solid #fff}
+.ig-stats{display:flex;gap:18px;text-align:center;flex:1;justify-content:space-around}
+.ig-stats b{display:block;font-size:1.25rem;line-height:1.1}
+.ig-stats small{font-size:.85rem;color:var(--corteza-suave)}
+.ig-name{margin-top:18px;font-weight:800;font-size:1.1rem}
+.ig-handle{color:var(--cobalto);font-weight:600;text-decoration:none}
+.ig-cat{color:var(--corteza-suave);font-size:.95rem}
+.ig-bio{margin-top:8px;font-size:.98rem;line-height:1.5;white-space:pre-line}
+.ig-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.ig-actions a{text-align:center;text-decoration:none;font-weight:700;font-size:.92rem;padding:9px 6px;border-radius:10px;background:#f1e6d8}
+.ig-actions a.seguir{background:var(--cobalto);color:#fff}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:20px;border-radius:12px;overflow:hidden}
+.ig-grid img{aspect-ratio:1;object-fit:cover;width:100%}
+.ig-copy .big{font-weight:800;font-stretch:80%;font-size:clamp(3rem,8vw,5.5rem);line-height:.9;color:var(--tomate);letter-spacing:-.03em}
+.ig-copy p{margin-top:14px}
+.ig-copy .btn{margin-top:26px}
+
+/* ---------- Menú ---------- */
+.menu-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}
+.tabs{display:inline-flex;background:var(--miga);border:1px solid var(--linea);border-radius:999px;padding:5px}
+.tabs button{font:inherit;font-weight:700;border:0;background:none;color:var(--corteza);padding:10px 22px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--corteza);color:var(--miga)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chips button{font:inherit;font-size:.95rem;font-weight:600;border:1.5px solid var(--sello);background:none;color:var(--corteza);padding:7px 16px;border-radius:999px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--cobalto);border-color:var(--cobalto);color:#fff}
+.carta{background:var(--miga);border:1px solid var(--linea);border-radius:var(--r-m);padding:12px 36px;columns:2;column-gap:56px}
+.plato{break-inside:avoid;padding:20px 0;border-bottom:1px dashed var(--linea)}
+.plato[hidden]{display:none}
+.plato-top{display:flex;align-items:baseline;gap:10px}
+.plato h3{font-size:1.12rem;font-weight:700;line-height:1.25}
+.plato .puntos{flex:1;border-bottom:2px dotted var(--sello);transform:translateY(-4px);min-width:20px}
+.plato .precio{font-weight:800;color:var(--cobalto);font-size:1.12rem;white-space:nowrap}
+.plato p{font-size:.95rem;color:var(--corteza-suave);margin-top:4px;max-width:46ch}
+.aviso{margin-top:18px;font-size:.92rem;color:var(--corteza-suave);max-width:70ch}
+.aviso b{color:var(--tomate)}
+
+/* ---------- Por encargo ---------- */
+.encargo{background:var(--cobalto);color:#fff}
+.encargo h2{color:#fff}
+.encargo .lead{color:#dbe4ff}
+.encargo-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;margin-top:40px}
+.encargo-item{border-top:3px solid rgba(255,255,255,.35);padding-top:18px}
+.encargo-item h3{font-size:1.35rem;font-weight:800;line-height:1.15;margin-bottom:8px}
+.encargo-item p{color:#dbe4ff;font-size:1rem}
+.encargo-item ul{list-style:none;margin-top:12px}
+.encargo-item li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.25)}
+.encargo-item li b{color:#ffd2c4}
+.encargo .btn{margin-top:40px}
+.encargo .btn:hover{background:#fff;color:var(--cobalto);border-color:#fff}
+
+/* ---------- Delivery ---------- */
+.delivery .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.apps{display:grid;gap:14px}
+.app{display:flex;align-items:center;gap:18px;text-decoration:none;background:var(--miga);border:1px solid var(--linea);border-radius:var(--r-m);padding:22px 24px;transition:transform .2s,border-color .2s}
+.app:hover{transform:translateY(-3px);border-color:var(--corteza)}
+.app .logo{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.05rem;flex:none}
+.app .rappi{background:#FF441F}
+.app .uber{background:#06C167}
+.app b{display:block;font-size:1.2rem}
+.app span{font-size:.95rem;color:var(--corteza-suave)}
+.app .ir{margin-left:auto;font-weight:800;color:var(--cobalto);white-space:nowrap}
+
+/* ---------- Lealtad ---------- */
+.lealtad{background:var(--miga);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.lealtad .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.tarjeta{background:var(--papel);border:2px solid var(--corteza);border-radius:22px;padding:28px;position:relative;box-shadow:10px 10px 0 var(--corteza)}
+.tarjeta-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.tarjeta-head img{width:54px;height:54px;border-radius:50%}
+.tarjeta-head b{display:block;font-size:1.25rem;font-weight:800;line-height:1.1}
+.tarjeta-head small{color:var(--corteza-suave)}
+.sellos{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sello{aspect-ratio:1;border-radius:50%;border:2px dashed var(--sello);display:grid;place-items:center;position:relative;font-weight:800;font-size:.85rem;color:var(--sello)}
+.sello::after{content:"";position:absolute;inset:-2px;border-radius:50%;background:var(--tomate) url("assets/instagram/profile.jpg") center/cover;background-blend-mode:multiply;transform:scale(0) rotate(-30deg);opacity:0;transition:transform .35s cubic-bezier(.3,1.6,.5,1),opacity .2s}
+.sello.premio{border-style:solid;border-color:var(--cobalto);color:var(--cobalto)}
+.sello::after{transition-delay:inherit}
+.tarjeta.llena .sello.marcado::after{transform:scale(1) rotate(-12deg);opacity:1}
+.premios{list-style:none;margin-top:22px;display:grid;gap:6px}
+.premios li{display:flex;justify-content:space-between;gap:12px;font-weight:600;border-bottom:1px dashed var(--linea);padding:6px 0}
+.premios li span{color:var(--cobalto);font-weight:800}
+.lealtad .btn{margin-top:26px}
+
+/* ---------- Galería ---------- */
+.galeria-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px;margin-top:36px}
+.galeria-grid figure{position:relative;border-radius:var(--r-s);overflow:hidden;background:var(--linea)}
+.galeria-grid a.alta{grid-row:span 2}
+.galeria-grid a{display:block}
+.galeria-grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.galeria-grid a:hover img{transform:scale(1.04)}
+.galeria-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;color:#fff;font-size:.92rem;font-weight:600;line-height:1.3;background:linear-gradient(transparent,rgba(40,24,14,.82))}
+
+/* ---------- Sucursales ---------- */
+.sucursales-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.sucursal{background:var(--miga);border:1px solid var(--linea);border-radius:var(--r-m);padding:30px}
+.sucursal h3{font-size:1.6rem;font-weight:800;line-height:1.1;color:var(--cobalto);margin-bottom:6px}
+.sucursal address{font-style:normal;color:var(--corteza-suave)}
+.horario{margin:18px 0;display:grid;grid-template-columns:auto 1fr;gap:4px 20px;font-size:.98rem}
+.horario dt{font-weight:700}
+.horario .cerrado{color:var(--corteza-suave)}
+.placeholder{background:#fde3d9;color:#9b2f12;padding:2px 8px;border-radius:6px;font-weight:700;font-size:.9rem}
+.sucursal .acciones{display:flex;flex-wrap:wrap;gap:10px}
+.sucursal .btn{padding:10px 18px;font-size:.95rem}
+.rating{margin-top:28px;font-weight:600}
+.rating b{color:var(--tomate);font-size:1.3rem}
+
+/* ---------- Footer ---------- */
+footer{background:var(--corteza);color:#f3e2cc;padding:64px 0 40px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer .lema-mini{font-weight:800;font-stretch:75%;font-size:3rem;line-height:.85;letter-spacing:-.03em}
+footer .lema-mini span:first-child{color:#9fb8ff}
+footer .lema-mini span:last-child{color:#ff9c80;display:block}
+footer h4{font-size:1rem;margin-bottom:10px;color:#fff}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.legal{grid-column:1/-1;border-top:1px solid rgba(243,226,204,.2);padding-top:22px;font-size:.88rem;color:#cdb79c;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .hero .wrap,.ig .wrap,.delivery .wrap,.lealtad .wrap{grid-template-columns:1fr}
+  .collage{height:420px;max-width:520px}
+  .carta{columns:1}
+  .encargo-grid{grid-template-columns:1fr}
+  .galeria-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .sucursales-grid{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  footer .wrap > :first-child{grid-column:1/-1}
+  .ig-card{margin:0 auto}
+}
+@media (max-width:760px){
+  section{padding:72px 0}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--papel);border-bottom:1px solid var(--linea);padding:8px 20px 16px}
+  .nav ul.abierto{display:flex}
+  .nav ul a{display:block;padding:12px 0}
+  .menu-toggle{display:block}
+  .nav .btn{display:none}
+  .carta{padding:4px 20px}
+  .collage{height:340px}
+  .lema{font-size:22vw}
+  .collage .sticker{width:100px;height:100px}
+  .ig-card{padding:20px}
+  .ig-top{gap:14px}
+  .ig-avatar{width:76px;height:76px}
+  .ig-stats{gap:8px}
+  .ig-stats b{font-size:1.05rem}
+  .tarjeta{box-shadow:6px 6px 0 var(--corteza);padding:20px}
+  .sellos{gap:8px}
+}
+@media (max-width:480px){
+  footer .wrap{grid-template-columns:1fr}
+  .tabs button{padding:10px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Principal">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="assets/instagram/profile.jpg" alt="">Aroma a Pan</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menú del sitio</button>
+    <ul id="nav-links">
+      <li><a href="#menu">Carta</a></li>
+      <li><a href="#pedir">Pedir a domicilio</a></li>
+      <li><a href="#lealtad">Tarjeta de lealtad</a></li>
+      <li><a href="#sucursales">Sucursales</a></li>
+    </ul>
+    <a class="btn btn--tomate" href="https://wa.me/529993945419" target="_blank" rel="noopener">Escríbenos</a>
+  </div>
+</nav>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <h1 class="lema" aria-label="Buen pan, buen día"><span class="l1">Buen pan</span><span class="l2">buen día</span></h1>
+        <p class="lead">Panadería artesanal y desayunos con alma, hechos frescos todos los días en Mérida. Ven por el pan y quédate por la experiencia.</p>
+        <div class="ctas">
+          <a class="btn btn--cobalto" href="#menu">Ver la carta</a>
+          <a class="btn" href="#pedir">Pedir a domicilio</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>4,6 ★</strong> en Google</span>
+          <span>Col. México Norte y Centro</span>
+          <span>Martes a domingo</span>
+        </div>
+      </div>
+      <div class="collage" aria-hidden="true">
+        <figure class="c1"><img src="assets/instagram/post-5.jpg" alt=""></figure>
+        <figure class="c2"><img src="assets/instagram/post-2.jpg" alt=""></figure>
+        <figure class="c3"><img src="assets/instagram/post-4.jpg" alt=""></figure>
+        <figure class="sticker"><img src="assets/instagram/profile.jpg" alt=""></figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- INSTAGRAM -->
+  <section class="ig" aria-labelledby="ig-titulo">
+    <div class="wrap">
+      <article class="ig-card">
+        <div class="ig-top">
+          <div class="ig-avatar"><img src="assets/instagram/profile.jpg" alt="Logo de Aroma a Pan: la perrita Maya con un café y un pan"></div>
+          <div class="ig-stats">
+            <div><b>608</b><small>publicaciones</small></div>
+            <div><b>20,8 mil</b><small>seguidores</small></div>
+            <div><b>166</b><small>seguidos</small></div>
+          </div>
+        </div>
+        <div class="ig-name">Aroma a Pan</div>
+        <a class="ig-handle" href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener">@aromaa.pan</a>
+        <div class="ig-cat">Panadería · Mérida, Yucatán</div>
+        <p class="ig-bio">📍Col México Norte 9993945419
+📍Centro 9991557535
+Mérida Yucatán
+🥐Martes a Domingo</p>
+        <div class="ig-actions">
+          <a class="seguir" href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener">Seguir</a>
+          <a href="https://wa.me/529993945419" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#menu">Carta</a>
+        </div>
+        <div class="ig-grid">
+          <img src="assets/instagram/post-2.jpg" alt="Desayuno con huevos, tocino y pan de masa madre" loading="lazy">
+          <img src="assets/instagram/post-5.jpg" alt="Charola de baguettes recién horneadas" loading="lazy">
+          <img src="assets/instagram/post-7.jpg" alt="Pan de muerto en caja" loading="lazy">
+          <img src="assets/instagram/post-11.jpg" alt="Focaccia con queso rallado" loading="lazy">
+          <img src="assets/instagram/post-10.jpg" alt="Pumpkin latte y capuccino" loading="lazy">
+          <img src="assets/instagram/post-4.jpg" alt="Pumpkin spice latte frío" loading="lazy">
+        </div>
+      </article>
+      <div class="ig-copy">
+        <p class="big" id="ig-titulo">20,8 mil</p>
+        <h2>personas ya siguen el pan de cada día</h2>
+        <p class="lead">Ahí contamos qué sale del horno, cuándo abren los pedidos de temporada y qué café nuevo llegó de @onzecafe.mx. Más de 600 publicaciones de pan, desayunos y alguna aparición de Maya.</p>
+        <a class="btn btn--cobalto" href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener">Seguir a @aromaa.pan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section id="menu" aria-labelledby="menu-titulo">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <h2 id="menu-titulo">La carta</h2>
+          <p class="lead">Desayunos servidos con pan de masa madre de la casa, y la panadería del día para llevar.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Secciones de la carta">
+          <button role="tab" aria-selected="true" aria-controls="carta" data-tab="desayunos">Desayunos</button>
+          <button role="tab" aria-selected="false" aria-controls="carta" data-tab="panaderia">Panadería</button>
+        </div>
+      </div>
+      <div class="chips" id="chips" aria-label="Filtrar desayunos">
+        <button aria-pressed="true" data-f="todo">Todo</button>
+        <button aria-pressed="false" data-f="huevos">Huevos</button>
+        <button aria-pressed="false" data-f="chilaquiles">Chilaquiles</button>
+        <button aria-pressed="false" data-f="sandwich">Sándwiches y toasts</button>
+        <button aria-pressed="false" data-f="dulce">Dulce</button>
+      </div>
+      <div class="carta" id="carta" role="tabpanel" aria-live="polite"></div>
+      <p class="aviso"><b>Nota para el dueño:</b> precios tomados de Aroma a Pan en Rappi (sucursal Col. México Norte, nov 2026). Confirma los precios de sucursal antes de publicar.</p>
+    </div>
+  </section>
+
+  <!-- POR ENCARGO -->
+  <section class="encargo" aria-labelledby="encargo-titulo">
+    <div class="wrap">
+      <h2 id="encargo-titulo">Apártalo por WhatsApp</h2>
+      <p class="lead">Lo de temporada se acaba rápido. Escríbenos y te lo guardamos.</p>
+      <div class="encargo-grid">
+        <div class="encargo-item">
+          <h3>Pan de muerto</h3>
+          <p>En temporada abrimos pedidos con pago anticipado y días de entrega fijos. Así fue en 2026:</p>
+          <ul>
+            <li>Tradicional <b>$57</b></li>
+            <li>Tiramisú-carajillo <b>$87</b></li>
+            <li>Mascarpone con fresas <b>$87</b></li>
+            <li>Chocolate Kinder <b>$87</b></li>
+          </ul>
+        </div>
+        <div class="encargo-item">
+          <h3>Focaccia</h3>
+          <p>Con mucho quesito. Corre por la tuya o apártala por WhatsApp antes de que se termine.</p>
+        </div>
+        <div class="encargo-item">
+          <h3>Mesa para desayunar</h3>
+          <p>Reserva tu desayuno en Centro o en Colonia México, de martes a domingo.</p>
+        </div>
+      </div>
+      <a class="btn" style="border-color:#fff;color:#fff" href="https://wa.me/529993945419?text=Hola%20Aroma%20a%20Pan%2C%20quiero%20apartar%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.7-.1 1.3z"/></svg>
+        Apartar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- DELIVERY -->
+  <section id="pedir" class="delivery" aria-labelledby="pedir-titulo">
+    <div class="wrap">
+      <div>
+        <h2 id="pedir-titulo">¿Antojo sin salir de casa?</h2>
+        <p class="lead">Pide los desayunos y la panadería de la sucursal Col. México Norte por tu app de siempre.</p>
+      </div>
+      <div class="apps">
+        <a class="app" href="https://www.rappi.com.mx/restaurantes/1930111069-aroma-a-pan" target="_blank" rel="noopener">
+          <span class="logo rappi">Rappi</span>
+          <div><b>Pedir en Rappi</b><span>Aroma a Pan, México Norte</span></div>
+          <span class="ir">Abrir</span>
+        </a>
+        <a class="app" href="https://www.ubereats.com/store/aroma-a-pan/JtQJHZe5Utib2BG3mqXggA" target="_blank" rel="noopener">
+          <span class="logo uber">Uber</span>
+          <div><b>Pedir en Uber Eats</b><span>Aroma a Pan</span></div>
+          <span class="ir">Abrir</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEALTAD -->
+  <section id="lealtad" class="lealtad" aria-labelledby="lealtad-titulo">
+    <div class="wrap">
+      <div>
+        <h2 id="lealtad-titulo">Cada visita suma un sello</h2>
+        <p class="lead">Crea gratis tu tarjeta digital, enséñala al pagar y canjea tus premios. Los sellos valen 60 días.</p>
+        <a class="btn btn--tomate" href="https://loyalia.app/c/M5G4yshz" target="_blank" rel="noopener">Crear mi tarjeta gratis</a>
+      </div>
+      <div class="tarjeta" id="tarjeta" role="img" aria-label="Tarjeta de lealtad de 15 sellos: bebida a los 5, pan y café a los 10, desayuno completo a los 15">
+        <div class="tarjeta-head">
+          <img src="assets/instagram/profile.jpg" alt="">
+          <div><b>Buen pan, buen día</b><small>Tarjeta de lealtad Aroma a Pan</small></div>
+        </div>
+        <div class="sellos" id="sellos"></div>
+        <ul class="premios">
+          <li>Bebida <span>5 sellos</span></li>
+          <li>Pan y café <span>10 sellos</span></li>
+          <li>Desayuno completo <span>15 sellos</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section aria-labelledby="galeria-titulo">
+    <div class="wrap">
+      <h2 id="galeria-titulo">Lo que pasa en Aroma</h2>
+      <p class="lead">Directo de nuestro Instagram.</p>
+      <div class="galeria-grid">
+        <a class="alta" href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-3.jpg" alt="El equipo de Aroma a Pan con el de Beer4Now" loading="lazy"><figcaption>Hazy Burger en pan de muerto, en colaboración con Beer4Now</figcaption></figure></a>
+        <a href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-8.jpg" alt="Pan de muerto de chocolate Kinder" loading="lazy"><figcaption>Pan de muerto de chocolate Kinder</figcaption></figure></a>
+        <a href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-11.jpg" alt="Focaccia con queso" loading="lazy"><figcaption>Focaccia friday</figcaption></figure></a>
+        <a class="alta" href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-12.jpg" alt="Camisetas de Buen pan, buen día" loading="lazy"><figcaption>Si conoces Aroma a Pan, conoces a Maya</figcaption></figure></a>
+        <a href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-10.jpg" alt="Pumpkin latte y capuccino" loading="lazy"><figcaption>Pumpkin latte de @onzecafe.mx</figcaption></figure></a>
+        <a href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener"><figure style="height:100%"><img src="assets/instagram/post-9.jpg" alt="Promoción de lattes por el día del café" loading="lazy"><figcaption>Día internacional del café</figcaption></figure></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCURSALES -->
+  <section id="sucursales" aria-labelledby="suc-titulo">
+    <div class="wrap">
+      <h2 id="suc-titulo">Dos casas en Mérida</h2>
+      <div class="sucursales-grid">
+        <article class="sucursal">
+          <h3>Col. México Norte</h3>
+          <address>C. 1H 138, Residencial Col. México, 97128 Mérida, Yuc.</address>
+          <dl class="horario">
+            <dt>Martes a sábado</dt><dd>8:00 a 20:00</dd>
+            <dt>Domingo</dt><dd>8:00 a 12:30</dd>
+            <dt>Lunes</dt><dd class="cerrado">Cerrado</dd>
+          </dl>
+          <div class="acciones">
+            <a class="btn btn--cobalto" href="https://www.google.com/maps/place/Aroma+a+pan/@21.0096357,-89.6033604,17z/data=!4m6!3m5!1s0x8f567744fd424d23:0x36cb233c9b84ad50" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn" href="tel:+529993945419">999 394 5419</a>
+          </div>
+        </article>
+        <article class="sucursal">
+          <h3>Centro</h3>
+          <address>Calle 62 450, Parque Santa Lucía, Centro, Mérida, Yuc.</address>
+          <dl class="horario">
+            <dt>Martes a domingo</dt><dd><span class="placeholder">[HORARIO CENTRO]</span></dd>
+            <dt>Lunes</dt><dd class="cerrado">Cerrado</dd>
+          </dl>
+          <div class="acciones">
+            <a class="btn btn--cobalto" href="https://www.google.com/maps/search/?api=1&amp;query=Aroma+a+Pan+Calle+62+450+Parque+Santa+Lucia+Merida" target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn" href="tel:+529991557535">999 155 7535</a>
+          </div>
+        </article>
+      </div>
+      <p class="rating"><b>4,6 ★</b> de calificación en Google Maps</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="lema-mini"><span>Buen pan</span><span>buen día</span></div>
+      <p style="margin-top:16px;max-width:36ch">Panadería artesanal y desayunos en Mérida, Yucatán.</p>
+    </div>
+    <div>
+      <h4>Visítanos</h4>
+      <ul>
+        <li><a href="#sucursales">Col. México Norte</a></li>
+        <li><a href="#sucursales">Centro</a></li>
+        <li><a href="#menu">La carta</a></li>
+        <li><a href="#lealtad">Tarjeta de lealtad</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Síguenos y pide</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/aromaa.pan/" target="_blank" rel="noopener">Instagram @aromaa.pan</a></li>
+        <li><a href="https://wa.me/529993945419" target="_blank" rel="noopener">WhatsApp 999 394 5419</a></li>
+        <li><a href="https://www.rappi.com.mx/restaurantes/1930111069-aroma-a-pan" target="_blank" rel="noopener">Rappi</a></li>
+        <li><a href="https://www.ubereats.com/store/aroma-a-pan/JtQJHZe5Utib2BG3mqXggA" target="_blank" rel="noopener">Uber Eats</a></li>
+      </ul>
+    </div>
+    <div class="legal">
+      <span>© <span id="anio">2026</span> Aroma a Pan, Mérida</span>
+      <span>Maqueta de propuesta, no publicada</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/529993945419" target="_blank" rel="noopener" aria-label="Escribir a Aroma a Pan por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.3c-.1.1-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+// Carta real tomada de Rappi (Aroma a Pan, México Norte), noviembre 2026
+const CARTA = {
+  desayunos: [
+    ["huevos","Huevos ahogados",198,"3 huevos ahogados en salsa ligeramente picante, queso panela, nopales, crema, cebolla morada y pan de masa madre"],
+    ["huevos","Huevos ahogados con longaniza",234,"3 huevos ahogados en salsa ligeramente picante, con longaniza, queso panela, nopales, crema, cebolla morada y pan de masa madre"],
+    ["huevos","Huevos ahogados con arrachera",234,"4 huevos ahogados en salsa ligeramente picante, con arrachera, queso panela, nopales, crema, cebolla morada y pan de masa madre"],
+    ["huevos","Huevos ahogados con pierna ahumada",234,"5 huevos ahogados en salsa ligeramente picante, con pierna ahumada, queso panela, nopales, crema, cebolla morada y pan de masa madre"],
+    ["huevos","Huevos benedictinos con lomo ahumado",192,"Huevos pochados tiernos, pan a elegir, salsa holandesa y lomo ahumado. Incluye una guarnición"],
+    ["huevos","Huevos benedictinos con jamón serrano",234,"Huevos pochados sobre pan, cubiertos con salsa holandesa y jamón serrano. Incluye guarnición"],
+    ["huevos","Huevos benedictinos con salmón curado",258,"Huevos pochados tiernos, pan a elegir, salsa holandesa y salmón curado. Incluye una guarnición"],
+    ["huevos","Huevos benedictinos con pierna ahumada",258,"Huevos pochados tiernos, pan a elegir, salsa holandesa y pierna ahumada. Incluye una guarnición"],
+    ["huevos","Omelette Aroma",210,"3 huevos, espinacas, tomate, cebolla morada, queso y pan de masa madre. Incluye una guarnición"],
+    ["huevos","Breakfast platter",234,"3 huevos, tocino, papas hashbrown, hongos salteados, salchicha y pan de masa madre"],
+    ["chilaquiles","Chilaquiles tradicionales",194,"Totopos de maíz, salsa a elegir, frijol, crema, queso panela y cebolla morada"],
+    ["chilaquiles","Chilaquiles con huevo",194,"Totopos de maíz, salsa a elegir, frijol, crema, queso panela, cebolla morada y huevo"],
+    ["chilaquiles","Chilaquiles con longaniza",259,"Totopos de maíz, salsa a elegir, frijol, crema, queso panela, cebolla morada y longaniza"],
+    ["chilaquiles","Chilaquiles con pechuga de pollo",259,"Totopos de maíz, salsa a elegir, frijol, crema, queso panela, cebolla morada y pechuga de pollo"],
+    ["chilaquiles","Chilaquiles con arrachera",259,"Totopos de maíz, salsa a elegir, frijol, crema, queso panela, cebolla morada y arrachera"],
+    ["sandwich","Avocado toast",210,"Pan de masa madre tostado, aguacate, queso panela, tomates cherry, pesto de albahaca y huevo estrellado"],
+    ["sandwich","Toast de hongos",180,"Pan de masa madre tostado, hongos salteados, cremoso de queso de cabra, tomate rostizado y pesto de albahaca"],
+    ["sandwich","Croissant de huevo",180,"Croissant, huevo, queso panela asado, tomate rostizado, arúgula y pesto de albahaca"],
+    ["sandwich","Croissant Monsieur",188,"Lomo ahumado artesanal, queso muenster, mostaza dijon, bañado en salsa bechamel y queso parmesano"],
+    ["sandwich","Croque Madame",210,"Pan de masa madre, pierna ahumada artesanal, queso muenster, mostaza dijon, salsa bechamel y huevo estrellado. Incluye una guarnición"],
+    ["sandwich","Bagel de salmón",186,"Bagel, salmón curado en casa, pepino, aguacate, cremoso de alcaparra, cebolla morada y aceite de chiles. Incluye una guarnición"],
+    ["sandwich","Club sandwich",209,"Pan de masa madre, huevo, pechuga de pollo, tocino, vegetales frescos y aderezo chipotle. Incluye una guarnición"],
+    ["sandwich","Breakfast burger",210,"Pan brioche, huevo revuelto en mantequilla, tocino, queso americano, arúgula y salsa tártara. Incluye una guarnición"],
+    ["sandwich","Sandwich Umami",245,"Pan con aceite de oliva, lechón borracho, pierna ahumada, queso muenster, pepinillo, mostaza y cebolla morada. Incluye una guarnición"],
+    ["dulce","French toast",210,"Pan de leche especiada, quenelle de mascarpone, miel de maple, fruta de temporada y nata"]
+  ],
+  panaderia: [
+    ["pan","Croissant",67,"De hojaldre dorado, ideal para acompañar con café o té"],
+    ["pan","Chocolatín",72,"Pieza de hojaldre rellena de chocolate"],
+    ["pan","Chocolatín almendrado",88,"Chocolatín con cobertura de almendras"],
+    ["pan","Trenza de canela",68,"Pan dulce en forma de trenza con canela"],
+    ["pan","Orejita de hojaldre",62,"Dulce crujiente que se deshace en la boca"],
+    ["pan","Galleta chocochip",65,"Crujiente, con chispas de chocolate semiamargo"]
+  ]
+};
+
+const carta = document.getElementById('carta');
+const chips = document.getElementById('chips');
+let tab = 'desayunos', filtro = 'todo';
+
+function pinta(){
+  carta.innerHTML = CARTA[tab].map(([cat,nombre,precio,desc]) => `
+    <div class="plato" data-cat="${cat}" ${tab==='desayunos' && filtro!=='todo' && cat!==filtro ? 'hidden' : ''}>
+      <div class="plato-top"><h3>${nombre}</h3><span class="puntos" aria-hidden="true"></span><span class="precio">$${precio}</span></div>
+      <p>${desc}</p>
+    </div>`).join('');
+  chips.hidden = tab !== 'desayunos';
+}
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+  tab = b.dataset.tab; pinta();
+}));
+chips.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  chips.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  filtro = b.dataset.f; pinta();
+});
+pinta();
+
+// Tarjeta de lealtad: 15 sellos, premios en 5, 10 y 15
+const sellos = document.getElementById('sellos');
+for (let i = 1; i <= 15; i++) {
+  const s = document.createElement('div');
+  s.className = 'sello' + (i % 5 === 0 ? ' premio' : '');
+  s.textContent = i % 5 === 0 ? i : '';
+  if (i <= 7) { s.classList.add('marcado'); s.style.transitionDelay = `${i * 90}ms`; }
+  sellos.appendChild(s);
+}
+const tarjeta = document.getElementById('tarjeta');
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver((entradas, obs) => {
+    entradas.forEach(en => { if (en.isIntersecting) { tarjeta.classList.add('llena'); obs.disconnect(); } });
+  }, { threshold: .5 }).observe(tarjeta);
+} else { tarjeta.classList.add('llena'); }
+
+// Nav
+const nav = document.querySelector('.nav');
+addEventListener('scroll', () => nav.classList.toggle('is-scrolled', scrollY > 10), { passive: true });
+const toggle = document.querySelector('.menu-toggle'), links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => {
+  const abierto = links.classList.toggle('abierto');
+  toggle.setAttribute('aria-expanded', abierto);
+});
+links.addEventListener('click', e => { if (e.target.tagName === 'A') { links.classList.remove('abierto'); toggle.setAttribute('aria-expanded', false); } });
+
+document.getElementById('anio').textContent = new Date().getFullYear();
+requestAnimationFrame(() => document.body.classList.add('is-loaded'));
+</script>
+</body>
+</html>
